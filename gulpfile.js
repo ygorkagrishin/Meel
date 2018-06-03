@@ -50,7 +50,9 @@ const paths = {
     libs: {
         normalize: 'node_modules/normalize.css/normalize.css',
         jquery: 'node_modules/jquery/dist/jquery.min.js',
-        dest: 'public/'
+        src: 'assets/static/libs/**/**/*',
+        dest: 'public/libs/',
+        watch: 'assets/static/libs/**/**/*'
     },
     dir: 'public/'
 }
@@ -120,14 +122,14 @@ gulp.task('php:build', () => {
         .pipe(gulp.dest(paths.php.dest))
 });
 
-gulp.task('js:libs:build', () => {
-    return gulp.src(paths.libs.jquery)
-        .pipe(gulp.dest(paths.libs.dest + 'libs/'))
-});
-
-gulp.task('css:libs:build', () => {
-    return gulp.src(paths.libs.normalize)
-        .pipe(gulp.dest(paths.libs.dest + 'libs/'))
+gulp.task('libs:build', () => {
+    return gulp.src([
+        paths.libs.src,
+        paths.libs.normalize,
+        paths.libs.jquery
+    ])
+    .pipe(newer(paths.libs.dest))
+    .pipe(gulp.dest(paths.libs.dest))
 });
 
 gulp.task('serve', () => {
@@ -144,9 +146,8 @@ gulp.task('watch', () => {
     gulp.watch(paths.js.watch, gulp.series('js:build'));
     gulp.watch(paths.fonts.watch, gulp.series('fonts:build'));
     gulp.watch(paths.img.watch, gulp.series('img:build'));
+    gulp.watch(paths.libs.watch, gulp.series('libs:build'));
 });
-
-gulp.task('libs:build', gulp.series('css:libs:build', 'js:libs:build'));
 
 gulp.task('build', 
     gulp.series('fonts:build', 'img:build', 'html:build', 'css:build', 'js:build', 'php:build'));
