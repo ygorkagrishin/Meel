@@ -6,18 +6,42 @@ block title
 block content
     main.page__main
 
+        // Header
+        include ../modules/_header
+        // Header end
+
+        // Hero
+        section.hero.sect
+            article.container
+                .sect__rows
+                    .sect__row
+                        .hero__cont
+                            h1.hero__title Meet Perth,
+                            .hero__text
+                                p
+                                    | A stupidly simple, flat PSD. 
+                                    | Oh yeah, it’s <span class="hero__nb">free</span> too!
+                            .hero__btn
+                                a(href="javascript:void(0);").btn__transparent.btn__transparent_color_white
+                                    <span>DownLoad</span>
+                                    <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                img(src="images/content/hero/iphone5.png", alt="iphone5 pic").hero__pic
+        // Hero end
+
         // About
         section.about.sect
             article.container
-                .about__rows.sect__rows
-                    .about__row.sect__row
-                        .about__col
+                .sect__rows
+                    .sect__row
+                        // about cont
+                        .about__cont
                             h2.about__title.sect__title A Longwinded Header
-                            p
-                                | She'll be right paddock how lets throw a ciggies. 
-                                | She'll be right ute to built like a doovalacky. 
-                                | We're going rack off bloody she'll be right pash. 
-                                | You little ripper tucker also get a dog up ya greenie.
+                            .about__text
+                                p
+                                    | She'll be right paddock how lets throw a ciggies. 
+                                    | She'll be right ute to built like a doovalacky. 
+                                    | We're going rack off bloody she'll be right pash. 
+                                    | You little ripper tucker also get a dog up ya greenie.
 
                             .about__nb
                                 | You little ripper boozer no worries she'll be right holy dooley!. Come a 
@@ -28,7 +52,34 @@ block content
                                 a(href="javascript:void(0);").btn__transparent.btn__transparent_color_green
                                     <span>Say Hello</span>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
+                        // about cont end
+                        img(src="images/content/about/ipad.png", alt="ipad flat").about__pic
         // About me
+
+        // Port
+        section.port.sect
+            article.container
+                .sect__rows
+                    .port__row.sect__row
+
+                        // port cont end
+                        .port__cont
+                            h2.port__title.sect__title Get a Dog Up Ya’
+                            .port__nb
+                                | She'll be right paddock how lets throw a ciggies. 
+                                | She'll be right ute to built like a doovalacky.
+                            .port__text
+                                p
+                                    | We're going rack off bloody she'll be right pash. You 
+                                    | little ripper tucker also get a dog up ya greenie.
+                            .port__btn
+                                a(href="javascript:void(0);").btn__transparent.btn__transparent_color_magento
+                                    <span>View On Dribble</span>
+                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                        // port cont end
+                        img(src="images/content/port/devices.png", alt="devices pic").port__pic
+
+        // Port end
 
         // Donate
         section.donate.sect
@@ -43,39 +94,40 @@ block content
         // Contact
         section.cont.sect
             .container
-                .cont__rows.sect__rows
-                    .cont__row.sect__row
-                        ul.cont__list
+                .sect__rows
+                    .sect__row
+                        .cont__cont
+                            ul.cont__list
 
-                            // dribble
-                            li.cont__item
-                                a(href="javascript:void(0);").cont__link
-                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            // dribble end
+                                // dribble
+                                li.cont__item
+                                    a(href="javascript:void(0);").cont__link
+                                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                // dribble end
 
-                            // facebook
-                            li.cont__item
-                                a(href="javascript:void(0);").cont__link
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                            // facebook end
-                            
-                            // twitter
-                            li.cont__item
-                                a(href="javascript:void(0);").cont__link
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                            // twitter end
-                            
-                            // mail
-                            li.cont__item
-                                a(href="javascript:void(0);").cont__link
-                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                            // mail end
+                                // facebook
+                                li.cont__item
+                                    a(href="javascript:void(0);").cont__link
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                // facebook end
+                                
+                                // twitter
+                                li.cont__item
+                                    a(href="javascript:void(0);").cont__link
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                // twitter end
+                                
+                                // mail
+                                li.cont__item
+                                    a(href="javascript:void(0);").cont__link
+                                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                // mail end
 
-                        form#form.form
-                            label(for="email").form__label Newsletter Subscription
-                            input(type="text", id="email", placeholder="Enter Email").form__input
-                            button(type="submit").form__submit.btn__submit
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            form#form.form
+                                label(for="email").form__label Newsletter Subscription
+                                input(type="text", id="email", placeholder="Enter Email").form__input
+                                button(type="submit").form__submit.btn__submit
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
         // Contact end
 
         // Footer

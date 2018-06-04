@@ -1,0 +1,20 @@
+.logo
+    position: relative
+    width: 100px
+    height: 100px
+    text-align: center
+    background-color: #fff
+    span 
+        font: 50px / 70px fontLogo
+        color: primaryBlue
+    &::after
+        shadow = #0da9e5
+
+        position: absolute
+        top: 15px
+        left: 15px
+        z-index: -1
+        width: 100%
+        height: 100%
+        background: rgba(shadow,.7)
+        content: ''
