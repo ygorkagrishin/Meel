@@ -1,0 +1,45 @@
+.nav
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999999
+    display: none
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    background: rgba(primaryLightRed,.7)
+    &.active
+        display: flex
+.nav__list
+    width: 100%
+    max-width: 260px
+.nav__row
+    display: flex
+    align-items: center
+    .fa
+        font-size: 18px
+        line-height: 50px
+        color: primaryBlue
+    &:not(:last-child)
+        margin-bottom: 22px
+.nav__box
+    width: 50px
+    height: 50px
+    text-align: center
+    background: #fff
+    border-radius: 50%
+.nav__link
+    display: inline-block
+    padding-left: 22px
+    font: 18px / 1 fontBoldItalic
+    color: #fff
+.nav__close
+    buttonReset()
+    position: absolute
+    top: 4.1%;
+    right: 12.9%;
+    color: #fff
+    cursor: pointer
+    .fa
+        font-size: 32px

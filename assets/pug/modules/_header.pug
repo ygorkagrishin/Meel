@@ -1,12 +1,23 @@
 header.header
     article.container
         .header__row
+
+            // Header logo
             .header__col
                 h2.logo
                     span p
+            // Header logo end
+
+            // Header navigator
+            .header__col
+                include ../modules/_navigator
+            // Header navigator end    
+
+            // Header menu
             .header__col
                 button(type="button").menu
-                    span.menu__bar
-                    span.menu__bar
-                    span.menu__bar
-                    span.menu__bar
+                    span
+                    span
+                    span
+                    span
+            // Header menu end
