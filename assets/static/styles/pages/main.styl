@@ -1,5 +1,10 @@
 .hero
     background: primaryBlue url('images/content/hero/hero_bg.png') no-repeat center / cover
+.hero__rows
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100vh
 .hero__col
     text-align: right
     color: #fff
@@ -13,6 +18,11 @@
         font-family: fontBoldItalic
 .about
     background-color: primaryLightGrey
+.about__rows
+    @extend .hero__rows
+.about__row
+    display: flex
+    justify-content: flex-start
 .about__col
     max-width 560px
 .about__text
@@ -27,6 +37,8 @@
     right: -5%
     bottom: -10%
     z-index: -1
+.port__rows
+    @extend .hero__rows
 .port__row
     display: flex
     justify-content: flex-end
@@ -51,6 +63,8 @@
     color: #fff
 .cont
     background-color: primaryLightGrey
+.cont__rows
+    @extend .hero__rows
 .cont__list
     margin-bottom: 67px
     text-align: center
