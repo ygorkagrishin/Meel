@@ -5,61 +5,80 @@
     flex-direction: column
     justify-content: center
     height: 100vh
+.hero__row
+    min-height: 650px
+    padding: 120px 0
 .hero__col
+    padding: 48px 0
     text-align: right
     color: #fff
 .hero__title
-    margin-bottom: 55px
+    margin-bottom: 40px
     font: 70px / 1 fontMainTitle 
 .hero__text
-    margin-bottom: 52px
+    margin-bottom: 50px
     font: 35px / 1 fontLight
     .hero__nb
         font-family: fontBoldItalic
+.hero__pic
+    position: absolute
+    bottom: -33%
+    left: 18.5%
 .about
     background-color: primaryLightGrey
 .about__rows
     @extend .hero__rows
 .about__row
+    @extend .hero__row
     display: flex
     justify-content: flex-start
 .about__col
     max-width 560px
+    padding: 20px 0
+.about__title
+    margin-bottom: 26px
 .about__text
-    margin-bottom: 33px 
+    margin-bottom: 23px 
 .about__nb
     padding-left: 16px
-    margin-bottom: 70px
+    margin-bottom: 66px
     font-family: fontItalic
     border-left: 6px solid primaryBlue 
 .about__pic
     position: absolute
-    right: -5%
-    bottom: -10%
+    right: -5.5%
+    bottom: -12%
     z-index: -1
 .port__rows
     @extend .hero__rows
 .port__row
+    @extend .hero__row
     display: flex
     justify-content: flex-end
+    padding: 97px 0
 .port__col
     max-width: 410px
+    padding-left: 16px
+.port__title
+    margin-bottom: 32px
 .port__nb
-    margin-bottom: 36px
+    margin-bottom: 24px
     font-family: fontSemiBoldItalic
     color: primaryDarkGreyNB
 .port__text
-    margin-bottom: 52px
+    margin-bottom: 54px
 .port__pic
     position: absolute
-    left: -10%
-    bottom: -11%    
+    left: -6.3%
+    bottom: -9.5%    
     z-index: -1
 .donate
-    padding: 100px 0
+    padding: 91px 0 99px 0
     text-align: center
     background: primaryGreen url('images/content/donate/bgGreen.png') no-repeat center / cover
 .donate__title
+    margin-bottom: 32px
+    letter-spacing: 1px
     color: #fff
 .cont
     background-color: primaryLightGrey
@@ -76,9 +95,9 @@
         margin-right: 35px
 .cont__link
     display: block
-    width: 56px
-    height: 56px
+    width: 50px
+    height: 50px
     .fa
         font-size: 24px
-        line-height: 56px
+        line-height: 50px
         color: primaryDarkGrey
