@@ -2,11 +2,18 @@
     box-sizing: border-box
 
 html
-    font-size: 100%
+    @media screen and (min-width: 1800px)
+        font-size: 125.0%
+    @media screen and (max-width: 1440px)    
+        font-size: 100%
+    @media screen and (max-width: 1024px)
+        font-size: 87.5%
+    @media screen and (max-width: 420px)
+        font-size: 75.0%
 
 body
     padding: 0
-    font: 16px / 25px mainFont
+    font: 1em / 1.563em mainFont
     color: primaryGrey
 
 .sect
@@ -16,8 +23,8 @@ body
 
 .container
     width: 100%
-    max-width 960px
-    padding: 0 10px 
+    max-width 60.000em
+    padding: 0 0.625em
     margin: 0 auto
 
 for $n in (1..6)
