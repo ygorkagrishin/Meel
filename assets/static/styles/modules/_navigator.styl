@@ -3,26 +3,30 @@
     top: 0
     left: 0
     z-index: 999999
-    display: none
     align-items: center
     justify-content: center
-    width: 100%
-    height: 100%
+    display: flex
+    width: 0
+    height: 0
     background: rgba(primaryLightRed,.7)
+    overflow: hidden
     &.active
-        display: flex
+        width: 100%
+        height: 100%
 .nav__list
     width: 100%
     max-width: 16.250em
-.nav__row
+    padding-left: 2.375em
+    margin-top: .5em
+.nav__row // List__item
     display: flex
     align-items: center
     .fa
         font-size: 1.125em
-        line-height: 3.125em
+        line-height: 2.9em
         color: primaryBlue
     &:not(:last-child)
-        margin-bottom: 1.375em
+        margin-bottom: .9em
 .nav__box
     width: 3.125em
     height: 3.125em
@@ -37,7 +41,7 @@
 .nav__close
     buttonReset()
     position: absolute
-    top: 4.1%;
+    top: 5.1%;
     right: 12.9%;
     color: #fff
     cursor: pointer
