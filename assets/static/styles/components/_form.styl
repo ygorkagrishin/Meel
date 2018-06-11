@@ -2,14 +2,19 @@
     font-family: fontSemiBoldItalic
     text-align: center
 .form__label 
+    display: inline-block
     font-size: 1.063em
     color: primaryDarkGrey
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        margin-bottom: .5em
 .form__input
     padding: .750em 3em .750em 1.250em
     margin-left: 1.625em
     border: none 
     border-radius: .625em
     outline-color: primaryGreen
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        margin-left: -1em
     &::-webkit-input-placeholder
         opacity: .3
     &::-moz-placeholder

@@ -8,16 +8,26 @@
 .hero__row
     min-height: 40.625em
     padding: 7.5em 0
+    @media screen and (orientation: portrait) and (max-width: 480px)
+        min-height: auto
+        padding: 2.5em 0
 .hero__col
     padding: 3em 0
     text-align: right
     color: #fff
+    @media screen and (orientation portrait) and (max-width: 480px)
+        text-align: center
 .hero__title
     margin-bottom: .571em
     font: 4.375em / 1 fontMainTitle 
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        margin-bottom: .3em
 .hero__text
     margin-bottom: 50px
     font: 2.188em / 1 fontLight
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        margin-bottom: 32px
+        font-size: 1.5em
     .hero__nb
         font-family: fontBoldItalic
 .hero__pic
@@ -25,10 +35,23 @@
     bottom: -33%
     left: 18.5%
     width: 18.1%
+    @media screen and (orientation: portrait) and (max-width: 1024px)
+        bottom: -10%
+        width: 30.1%
+    @media screen and (orientation: portrait) and (max-width: 480px)
+        bottom: -24%;
+        left: 25%
+        width: 50.1%;
+    @media screen and (orientation: portrait) and (max-width: 420px)
+        bottom: -35%
+    @media screen and (orientation: portrait) and (max-width: 345px) and (max-height: 480px)
+        bottom: -44%
 .about
     background-color: primaryLightGrey
 .about__rows
     @extend .hero__rows
+    @media screen and (orientation: portrait) and (max-width: 420px)
+        justify-content: flex-start
 .about__row
     @extend .hero__row
     display: flex
@@ -36,6 +59,11 @@
 .about__col
     max-width 35em
     padding: 1.250em 0
+    @media screen and (orientation: portrait) and (max-width: 480px)
+        max-width: 100%
+        text-align: center
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        padding: 0
 .about__title
     margin-bottom: .650em
 .about__text
@@ -51,16 +79,36 @@
     bottom: -12%
     z-index: -1
     width: 32.3%
+    @media screen and (orientation: portrait) and (max-width: 1024px)
+        right: -2.5%
+        bottom: -5%
+        width: 38.3%
+    @media screen and (orientation: portrait) and (max-width: 480px)
+        right: auto;
+        left: 21%;
+        bottom: -18%;
+        width: 60%;
+    @media screen and (orientation: portrait) and (max-width: 345px) and (max-height: 480px)
+        left: 20%
+        bottom: -35%
 .port__rows
     @extend .hero__rows
+    @media screen and (orientation: portrait) and (max-width: 420px)
+        justify-content: flex-start
 .port__row
     @extend .hero__row
     display: flex
     justify-content: flex-end
     padding: 6.063em 0
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        padding: 2.5em 0
 .port__col
     max-width: 25.625em
     padding-left: 1em
+    @media screen and (orientation: portrait) and (max-width: 480px)
+        max-width: 100%
+        padding: 0
+        text-align: center
 .port__title
     margin-bottom: .8em
 .port__nb
@@ -75,14 +123,24 @@
     bottom: -9.5%    
     z-index: -1
     width: 66.5%
+    @media screen and (orientation: portrait) and (max-width: 1024px)
+        bottom: -3.5%
+        width: 75.5%
+    @media screen and (orientation: portrait) and (max-width: 480px)
+        left: -5.3%
+        width: 90%
 .donate
     padding: 5.688em 0 6.188em 0
     text-align: center
     background: primaryGreen url('images/content/donate/bgGreen.png') no-repeat center / cover
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        padding: 5em 0
 .donate__title
     margin-bottom: .8em
     letter-spacing: .025em
     color: #fff
+    @media screen and (orientation: portrait) and (max-width: 345px)
+        font-size: 2em
 .cont
     background-color: primaryLightGrey
 .cont__rows
@@ -104,3 +162,5 @@
         font-size: 1.5em
         line-height: 2.083em
         color: primaryDarkGrey
+        @media screen and (orientation: portrait) and (max-width: 420px)
+            line-height: 2.2em
