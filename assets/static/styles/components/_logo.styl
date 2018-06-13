@@ -4,9 +4,14 @@
     height: 4.167em
     text-align: center
     background-color: #fff
+    @media screen and (orientation: landscape) and (max-width: 600px)
+        width: 3.5em
+        height: 3.5em
     span 
         font: 2.083em / 1.4em fontLogo
         color: primaryBlue
+        @media screen and (orientation: landscape) and (max-width: 600px)
+            line-height: 1em
     &::after
         shadow = #0da9e5
 
