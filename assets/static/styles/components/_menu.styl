@@ -1,6 +1,8 @@
 .menu
     buttonReset()
     margin: .5em 0
+    &.collapsed
+        display: none
     span
         display: block
         width: 1.875em 
@@ -10,3 +12,13 @@
         cursor: pointer
         &:not(last-child)
             margin-bottom: .125em
+.menu--close
+    buttonReset()
+    position: relative
+    z-index: 9999999
+    color: #fff
+    cursor: pointer
+    &.collapsed
+        display: none
+    .fa
+        font-size: 2em
